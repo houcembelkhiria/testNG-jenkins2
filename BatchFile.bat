@@ -10,6 +10,6 @@ mvn compile
 
 rem Step 3: Run TestNG tests with specified testng.xml file
 echo Running TestNG tests...
-mvn clean test -Dsurefire.suiteXmlFiles="testng.xml"
+mvn test -Dsurefire.suiteXmlFiles="testng.xml"
 
 echo All tasks complete.
