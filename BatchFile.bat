@@ -1,9 +1,15 @@
-<?xml version ="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Test">
-    <classes>
-      <class name="paruVenduTestNG.NG"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+@echo off
+
+rem Step 1: Clean the project
+echo Cleaning the project...
+mvn clean
+
+rem Step 2: Compile the project
+echo Compiling the project...
+mvn compile
+
+rem Step 3: Run TestNG tests with specified testng.xml file
+echo Running TestNG tests...
+mvn clean test -Dsurefire.suiteXmlFiles="testng.xml"
+
+echo All tasks complete.
