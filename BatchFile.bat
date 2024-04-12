@@ -1,15 +1,14 @@
 @echo off
-
-rem Step 1: Clean the project
 echo Cleaning the project...
 mvn clean
 
-rem Step 2: Compile the project
 echo Compiling the project...
 mvn compile
 
-rem Step 3: Run TestNG tests with specified testng.xml file
-echo Running TestNG tests...
-mvn test -Dsurefire.suiteXmlFiles="testng.xml"
+echo Running tests...
+mvn test
 
-echo All tasks complete.
+echo Copying TestNG results report to workspace...
+xcopy /y /s "target\surefire-reports\testng-results.xml" "C:\Users\TOSHIBA\.jenkins\workspace\TestNG\test-output\"
+
+echo Finished.
