@@ -15,6 +15,8 @@ public class NG {
 
 	@BeforeTest
 	public void setUp() {
+		        System.out.println("Test NG started !!!! ");
+
 		String projectLocation = System.getProperty("user.dir");
 		System.out.println(projectLocation);
 		System.setProperty("webdriver.gecko.driver",projectLocation + "/src/lib/geckodriver.exe");
@@ -22,6 +24,8 @@ public class NG {
 	}
 	@Test
 	public void navigate() {
+		        System.out.println("Test NG in progress 1 !!!! ");
+
 		JavascriptExecutor js = (JavascriptExecutor)driver;	
 		driver.get("https://www.paruvendu.fr");
 		js.executeScript("cmp_pv.cookie.saveConsent(true);");
@@ -106,7 +110,8 @@ public class NG {
 		  }
 		  				
 	
-	
+		        System.out.println("Test NG in progress 2 !!!! ");
+
 	}
 	
 	@AfterTest
