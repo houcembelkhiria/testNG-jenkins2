@@ -27,7 +27,8 @@ public void setUp() {
     FirefoxOptions options = new FirefoxOptions();
     options.addArguments("--headless");
     System.out.println("headless is set ");
-	
+	// Set Firefox binary location using the moz:firefoxOptions capability
+    options.setCapability("moz:firefoxOptions", options);
     driver = new FirefoxDriver(options);
     System.out.println("Firefox driver is instantiated  ");
 }
