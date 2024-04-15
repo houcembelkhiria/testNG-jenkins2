@@ -24,6 +24,7 @@ public class NG {
 		System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
 		System.out.println("Firefox is set " );
 		driver = new FirefoxDriver();
+		System.out.println("Firefox driver is instanciated  " );
 	}
 	@Test
 	public void navigate() {
