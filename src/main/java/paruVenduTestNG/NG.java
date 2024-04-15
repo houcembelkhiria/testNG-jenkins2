@@ -4,7 +4,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,24 +14,19 @@ public class NG {
 		
 
 	@BeforeTest
-public void setUp() {
-    System.out.println("Test NG started !!!! ");
-    String projectLocation = System.getProperty("user.dir");
-    System.out.println("location is " + projectLocation);
-    System.setProperty("webdriver.gecko.driver", projectLocation + "/src/lib/geckodriver.exe");
-    System.out.println("geckodriver is set ");
-    System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
-    System.out.println("Firefox is set ");
-    
-    FirefoxOptions options = new FirefoxOptions();
-    options.addArguments("--headless");
-    System.out.println("headless is set ");
-	// Set Firefox binary location using the moz:firefoxOptions capability
-    options.setCapability("moz:firefoxOptions", options);
-    driver = new FirefoxDriver(options);
-    System.out.println("Firefox driver is instantiated  ");
-}
+	public void setUp() {
+        System.out.println("Test NG started !!!! ");
 
+		String projectLocation = System.getProperty("user.dir");
+		System.out.println("location is " + projectLocation);
+		System.setProperty("webdriver.gecko.driver",projectLocation + "/src/lib/geckodriver.exe");
+		System.out.println("geckodriver is set");
+		System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
+		System.out.println("firefox is set");
+		driver = new FirefoxDriver();
+	   	System.out.println("FirefoxDriver is instanciated");
+
+	}
 	@Test
 	public void navigate() {
         System.out.println("Test NG in progress 1 !!!! ");
