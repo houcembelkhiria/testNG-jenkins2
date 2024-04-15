@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,15 +14,21 @@ import org.testng.annotations.Test;
 public class NG {
     WebDriver driver = null;
 
-    @BeforeTest
+
+
+        @BeforeTest
     public void setUp() {
         System.out.println("Test NG started !!!! ");
         String projectLocation = System.getProperty("user.dir");
         System.out.println(projectLocation);
         System.setProperty("webdriver.gecko.driver", projectLocation + "/src/lib/geckodriver.exe");
       //  System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
-        System.setProperty("webdriver.firefox.bin", projectLocation +"/src/lib/firefox.exe");
-        driver = new FirefoxDriver();
+
+        // Specify the path to the Firefox binary
+        FirefoxOptions options = new FirefoxOptions();
+        options.setBinary(projectLocation + "/src/lib/firefox.exe");
+
+        driver = new FirefoxDriver(options);
     }
 
     @Test
