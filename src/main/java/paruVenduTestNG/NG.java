@@ -18,8 +18,8 @@ public class NG {
         System.out.println("Test NG started !!!! ");
 
 		String projectLocation = System.getProperty("user.dir");
-		System.out.println(projectLocation);
-		System.setProperty("webdriver.gecko.driver","src/lib/geckodriver.exe");
+		System.out.println("location is " + projectLocation);
+		System.setProperty("webdriver.gecko.driver","projectLocation + src/lib/geckodriver.exe");
 		System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
 		driver = new FirefoxDriver();
 	}
