@@ -32,24 +32,7 @@
 			</configuration>
 		</plugin>
 
-		 <plugin>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager-maven-plugin</artifactId>
-            <version>5.0.3</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>webdrivermanager</goal>
-                    </goals>
-                    <configuration>
-                        <browserType>firefox</browserType>
-                        <driverVersions>
-                            <driverVersion>latest</driverVersion>
-                        </driverVersions>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+
 	</plugins>
 </build>
 </project>
