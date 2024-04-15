@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -24,6 +25,9 @@ public class NG {
 		System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
 		System.out.println("Firefox is set " );
 		driver = new FirefoxDriver();
+		FirefoxOptions options = new FirefoxOptions();
+options.addArgument("--headless");
+WebDriver driver = new FirefoxDriver(options);
 		System.out.println("Firefox driver is instanciated  " );
 	}
 	@Test
