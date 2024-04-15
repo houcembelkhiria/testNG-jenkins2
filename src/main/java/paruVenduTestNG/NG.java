@@ -21,8 +21,8 @@ public class NG {
 		System.out.println("location is " + projectLocation);
 		System.setProperty("webdriver.gecko.driver",projectLocation + "/src/lib/geckodriver.exe");
 		System.out.println("geckodriver is set");
-		System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
-		System.out.println("firefox is set");
+		//System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
+		//System.out.println("firefox is set");
 		driver = new FirefoxDriver();
 	   	System.out.println("FirefoxDriver is instanciated");
 
