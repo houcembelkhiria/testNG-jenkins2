@@ -19,8 +19,7 @@ public class NG {
 
 		String projectLocation = System.getProperty("user.dir");
 		System.out.println("location is " + projectLocation);
-		//System.setProperty("webdriver.gecko.driver",projectLocation + "/src/lib/geckodriver.exe");
-		System.setProperty("webdriver.gecko.driver","geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver",projectLocation + "/src/lib/geckodriver.exe");
 		//System.setProperty("webdriver.gecko.driver","C:\\Users\\TOSHIBA\\.jenkins\\workspace\\TestNG2\\src\\lib\\geckodriver.exe ");
 		
 		System.out.println("geckodriver is set");
