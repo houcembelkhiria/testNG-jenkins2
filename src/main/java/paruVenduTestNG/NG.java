@@ -10,20 +10,29 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import org.openqa.selenium.firefox.FirefoxOptions;
 public class NG {
     WebDriver driver = null;
-
     @BeforeTest
     public void setUp() {
         System.out.println("Test NG started !!!! ");
         String projectLocation = System.getProperty("user.dir");
         System.out.println(projectLocation);
+        
+        // Set path to geckodriver executable
         System.setProperty("webdriver.gecko.driver", projectLocation + "/src/lib/geckodriver.exe");
-      //  System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
-        System.setProperty("webdriver.firefox.bin", projectLocation + "/src/lib/firefox.exe");
-        driver = new FirefoxDriver();
+        
+        // Set Firefox binary location
+        System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
+        
+        // Create FirefoxOptions and set headless mode
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true); // Set headless mode
+        
+        // Initialize FirefoxDriver with options
+        driver = new FirefoxDriver(options);
     }
-
+  
     @Test
     public void navigate() {
         System.out.println("Test NG in progress 1 !!!! ");
