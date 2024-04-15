@@ -20,7 +20,7 @@ public class NG {
         System.out.println(projectLocation);
         System.setProperty("webdriver.gecko.driver", projectLocation + "/src/lib/geckodriver.exe");
       //  System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
-        System.setProperty("webdriver.firefox.bin", projectLocation + "/src/lib/firefox.exe");
+        System.setProperty("webdriver.firefox.bin", "C:/Program Files/Mozilla Firefox/firefox.exe");
         driver = new FirefoxDriver();
     }
 
