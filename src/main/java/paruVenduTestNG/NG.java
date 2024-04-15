@@ -26,7 +26,8 @@ public class NG {
 
         // Specify the path to the Firefox binary
         FirefoxOptions options = new FirefoxOptions();
-        options.setBinary(projectLocation + "/src/lib/firefox.exe");
+        //options.setBinary(projectLocation + "/src/lib/firefox.exe"); 
+        options.setBinary(projectLocation + "C:/Program Files/Mozilla Firefox/firefox.exe");
 
         driver = new FirefoxDriver(options);
     }
