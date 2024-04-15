@@ -41,14 +41,13 @@ public class NG {
 
         driver.navigate().refresh();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-WebDriverWait wait = new WebDriverWait(driver, 10);
-WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Déposer une annonce gratuite")));
-element.click();
+        driver.findElement(By.partialLinkText("Déposer une annonce gratuite")).click();
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
