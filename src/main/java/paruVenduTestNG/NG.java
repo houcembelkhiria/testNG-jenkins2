@@ -44,7 +44,9 @@ public class NG {
             e.printStackTrace();
         }
 
-        driver.findElement(By.partialLinkText("Déposer une annonce gratuite")).click();
+WebDriverWait wait = new WebDriverWait(driver, 10);
+WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.partialLinkText("Déposer une annonce gratuite")));
+element.click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
