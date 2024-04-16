@@ -46,7 +46,8 @@ public class NG {
             e.printStackTrace();
         }
 
-        driver.findElement(By.partialLinkText("Déposer une annonce gratuite")).click();
+        //driver.findElement(By.partialLinkText("Déposer une annonce gratuite")).click();
+driver.findElement(By.partialLinkText("D\u00E9poser une annonce gratuite")).click();
 
         try {
             Thread.sleep(2000);
