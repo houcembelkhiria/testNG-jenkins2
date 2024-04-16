@@ -99,7 +99,8 @@ driver.findElement(By.partialLinkText("D\u00E9poser une annonce gratuite")).clic
 
         driver.findElement(By.id("suivant1")).click();
         String codeSource = driver.getPageSource();
-        String chaine = "Vos coordonnées de contact";
+        //String chaine = "Vos coordonnées de contact";
+String chaine = "Vos coordonn\u00E9es de contact";
 
         if (codeSource.contains(chaine)) {
             System.out.println("existe");
