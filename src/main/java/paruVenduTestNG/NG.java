@@ -39,7 +39,7 @@ public class NG {
             e.printStackTrace();
         }
 
-        driver.navigate().refresh();
+       // driver.navigate().refresh();
         try {
             Thread.sleep(8000);
         } catch (InterruptedException e) {
